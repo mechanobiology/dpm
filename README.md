@@ -1,1 +1,8 @@
-# dpm
+# DPM
+This repository contains the Python code for computing the Discrete Protein Metric (DPM). This image similarity metric calculates the accuracy score of discrete structure predictions, such as cell focal adhesion (FA) sites, by comparing ground truth image to predicted image. This method can be used to validate results from neural network training for image-to-image regression or segmentation.
+# FA and membrane processing functions
+The membrane_FA_processing notebook contains two different functions to process FA and membrane raw images. The fa_processing function will output the binary FA image and the membrane_processing function will output the segmented membrane image. These functions can be used to better visualize cell boundaries and FA sites.
+# Calculate DPM score of data samples
+In the data folder, you can find several data samples of cell image pairs containing ground truth and predicted FA sites. Each image also contains the membrane structure to extract the cell boundaries. The DPM_function notebook imports all the required libraries and contains a Python function for calculating the DPM score. 
+The function takes as inputs the ground truth and prediction image paths, the size threshold below which FA sites are dropped, the scale of the images in microns/pixel, and the weights for distribution (d), shape/size (s), and angle (a). The function outputs the dpm, d, s, and a scores.   
+You can download the data samples and the notebook and calculate the DPM score for each sample and compare the values you obtained to the ones provided on the dpm_scores.csv file. 

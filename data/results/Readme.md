@@ -1,0 +1,1 @@
+The dpm_scores.csv file contains the expected DPM, d, s, and a values for the 5 samples on the data folder. Furthermore, the binary FA images for each sample are included, which can be obtained by using the FA processing function on the raw sample images.
